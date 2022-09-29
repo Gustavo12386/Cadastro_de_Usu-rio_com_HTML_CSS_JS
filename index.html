@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+body{
+background-color: rgba(9, 9, 189, 0.719)
+;
+font-family: sans-serif;
+}
+.form{
+width: 400px;
+margin: auto;
+padding-top: 70px;
+}
+.card{
+    box-shadow: 1px 1px 5px #ccc;
+    background-color: rgb(26, 24, 24);
+    padding: 30px;
+    border-radius: 5px;
+}
+.card-top{
+    text-align: center;
+}
+.card-group{
+    margin-bottom: 20px; 
+}
+.title{
+    color: rgb(255, 249, 249); 
+}
+.card-group> label{
+    width: 100%;
+    color: rgb(248, 246, 246);
+    display: block;
+}
+.card-group> input{
+    border-radius: 5px;
+    outline: 0;
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+}
+.card-group> button{
+  background-color: rgb(255, 238, 238);
+   width: 40%; 
+   border-radius: 5px;
+   padding: 15px;   
+   color: rgb(0, 0, 0);
+   border: 0px;
+   outline: 0;
+}
+</style> 
+<script type="text/javascript">
+ function CadastrarUsuario(){
+   var nome = document.getElementById('nome');
+   var cpf = document.getElementById('cpf');
+   var rg = document.getElementById('rg');
+   var telefone = document.getElementById('telefone');
+   var email = document.getElementById('email');
+
+   var n = String(nome.value);
+   var c = String(cpf.value);
+   var r = String(rg.value);
+   var tel = String(telefone.value);
+   var e = String(email.value);
+ 
+   alert('Seu nome:' + n);
+   alert('seu CPF:' + c);
+   alert('Seu RG:' + r);
+   alert('Seu telefone:' + tel);
+   alert('Seu email' + e);
+ }
+</script>   
+</head>
+<body>
+   <form class="form" action="">
+        <div class="card">
+            <div class="card-top">
+                <h2 class="title">Cadastro de Usuário</h2>              
+            </div>
+            <div class="card-group">
+                <label>Nome do Usuário</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do usuário" required>
+            </div>
+            <div class="card-group">
+                <label>CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+            </div>
+            <div class="card-group">
+                <label>RG</label>
+                <input type="text" id="rg" name="rg" placeholder="Digite o RG" required>
+            </div>
+            <div class="card-group">
+                <label>Telefone</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+            </div>
+            <div class="card-group">
+                <label>Email</label>
+                <input type="text" id="email" name="email" placeholder="Digite o email" required>
+            </div>                    
+            <div class="card-group" style="text-align:center">                
+                <button id="bt1" name="btn" onclick="CadastrarUsuario()">Cadastrar</button>
+                <div type="number" id="resposta"></div>
+            </div>           
+        </div>
+    </form>  
+</body>
+</html>
